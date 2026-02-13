@@ -1,60 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Krishna Reddy | Cyber Security Portfolio</title>
+    <title>Krishna Reddy | SOC Analyst</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial; margin: 0; background: #0f172a; color: white; }
-        header { text-align: center; padding: 50px; background: #1e293b; }
-        section { padding: 40px; }
-        h2 { color: #38bdf8; }
-        .project { margin-bottom: 30px; }
+        body {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            background-color: black;
+            color: #00ff00;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            border-bottom: 1px solid #00ff00;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        section {
+            padding: 40px;
+            border-bottom: 1px solid #003300;
+        }
+
+        h2 {
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        .glow {
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #00ff00; }
+            to { text-shadow: 0 0 20px #00ff00; }
+        }
+
+        button {
+            background-color: black;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003300;
+        }
+
+        .terminal {
+            background-color: #111;
+            padding: 20px;
+            margin-top: 20px;
+        }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Krishna Reddy</h1>
-    <p>Cyber Security Enthusiast | SOC Analyst Aspirant</p>
+    <h1 class="glow">K V Krishna Reddy</h1>
+    <p>Entry-Level SOC Analyst | Threat Detection | SIEM Enthusiast</p>
 </header>
 
 <section>
     <h2>About Me</h2>
-    <p>BTech CSE Graduate (2025) with hands-on Cyber Security training...</p>
+    <div class="terminal">
+        <p>> SOC Analyst with hands-on experience in SIEM monitoring, threat hunting, and incident response.</p>
+        <p>> Skilled in Splunk, Wazuh, and vulnerability assessment.</p>
+        <p>> Actively seeking SOC role in a real-time security operations environment.</p>
+    </div>
 </section>
 
 <section>
-    <h2>Skills</h2>
+    <h2>Technical Skills</h2>
     <ul>
-        <li>Vulnerability Assessment</li>
-        <li>OWASP Top 10</li>
-        <li>Nmap, Wireshark, Burp Suite</li>
-        <li>Linux & Networking</li>
+        <li>SIEM: Splunk, Wazuh</li>
+        <li>Security Tools: Kali Linux, Nmap, Hydra, Burp Suite, Metasploit</li>
+        <li>Network Security: IDS/IPS, Packet Analysis</li>
+        <li>Vulnerability Assessment & OWASP Top 10</li>
+        <li>Incident Response (NIST Framework)</li>
     </ul>
 </section>
 
 <section>
-    <h2>Projects</h2>
-
-    <div class="project">
-        <h3>Network Scanning Using Nmap</h3>
-        <p>Identified open ports and services in a lab environment.</p>
+    <h2>Hands-On SOC Projects</h2>
+    <div class="terminal">
+        <p>> Built Wazuh SIEM lab to monitor endpoints</p>
+        <p>> Investigated brute-force attacks using Splunk queries</p>
+        <p>> Detected phishing attempts via header & VirusTotal analysis</p>
+        <p>> Created incident reports using NIST IR framework</p>
     </div>
+</section>
 
-    <div class="project">
-        <h3>Web Application Vulnerability Testing</h3>
-        <p>Tested OWASP Top 10 vulnerabilities.</p>
-    </div>
-
-    <div class="project">
-        <h3>Packet Analysis Using Wireshark</h3>
-        <p>Analyzed network traffic for suspicious patterns.</p>
-    </div>
-
+<section>
+    <h2>Certifications</h2>
+    <ul>
+        <li>Cyber Security Analyst - Hacker School</li>
+        <li>Introduction to Cyber Security - Cisco</li>
+        <li>Certified Phishing Prevention Specialist (CPPS)</li>
+        <li>Tata Forage Cyber Security Simulation</li>
+    </ul>
 </section>
 
 <section>
     <h2>Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
+    <p>Email: kvkreddy025@gmail.com</p>
+    <p>Location: Hyderabad, India</p>
 </section>
 
 </body>
