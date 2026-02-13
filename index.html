@@ -3,113 +3,127 @@
 <head>
     <title>Krishna Reddy | SOC Analyst</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <style>
         body {
             margin: 0;
-            font-family: 'Courier New', monospace;
-            background-color: black;
+            background: black;
             color: #00ff00;
+            font-family: 'Courier New', monospace;
+            overflow-x: hidden;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
 
         header {
             text-align: center;
-            padding: 50px;
-            border-bottom: 1px solid #00ff00;
+            padding: 80px 20px;
         }
 
         h1 {
-            font-size: 40px;
-            text-shadow: 0 0 10px #00ff00;
+            font-size: 45px;
+            text-shadow: 0 0 20px #00ff00;
+        }
+
+        h2 {
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 10px;
         }
 
         section {
             padding: 40px;
-            border-bottom: 1px solid #003300;
+            max-width: 900px;
+            margin: auto;
         }
 
-        h2 {
-            color: #00ff00;
-            text-shadow: 0 0 5px #00ff00;
+        .terminal {
+            background: #111;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 20px #00ff00;
         }
 
-        ul {
-            list-style-type: square;
+        .skill-bar {
+            background: #111;
+            margin: 10px 0;
         }
 
-        .glow {
-            animation: glow 1.5s infinite alternate;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 5px #00ff00; }
-            to { text-shadow: 0 0 20px #00ff00; }
+        .skill-fill {
+            height: 20px;
+            background: #00ff00;
+            width: 0;
+            transition: width 2s;
         }
 
         button {
-            background-color: black;
+            background: black;
             color: #00ff00;
             border: 1px solid #00ff00;
             padding: 10px 20px;
             cursor: pointer;
+            margin-top: 20px;
         }
 
         button:hover {
-            background-color: #003300;
+            background: #003300;
         }
 
-        .terminal {
-            background-color: #111;
+        footer {
+            text-align: center;
             padding: 20px;
-            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
 
+<canvas id="matrix"></canvas>
+
 <header>
-    <h1 class="glow">K V Krishna Reddy</h1>
-    <p>Entry-Level SOC Analyst | Threat Detection | SIEM Enthusiast</p>
+    <h1>K V Krishna Reddy</h1>
+    <p id="typing"></p>
+    <button onclick="downloadResume()">Download Resume</button>
 </header>
 
 <section>
     <h2>About Me</h2>
     <div class="terminal">
-        <p>> SOC Analyst with hands-on experience in SIEM monitoring, threat hunting, and incident response.</p>
-        <p>> Skilled in Splunk, Wazuh, and vulnerability assessment.</p>
-        <p>> Actively seeking SOC role in a real-time security operations environment.</p>
+        <p>> Entry-Level SOC Analyst</p>
+        <p>> SIEM Monitoring | Threat Detection | Incident Response</p>
+        <p>> Splunk | Wazuh | Nmap | Wireshark | Burp Suite</p>
     </div>
 </section>
 
 <section>
     <h2>Technical Skills</h2>
-    <ul>
-        <li>SIEM: Splunk, Wazuh</li>
-        <li>Security Tools: Kali Linux, Nmap, Hydra, Burp Suite, Metasploit</li>
-        <li>Network Security: IDS/IPS, Packet Analysis</li>
-        <li>Vulnerability Assessment & OWASP Top 10</li>
-        <li>Incident Response (NIST Framework)</li>
-    </ul>
+
+    <p>SIEM Monitoring</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+
+    <p>Threat Detection</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+
+    <p>Incident Response</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+
+    <p>Vulnerability Assessment</p>
+    <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+
 </section>
 
 <section>
     <h2>Hands-On SOC Projects</h2>
     <div class="terminal">
-        <p>> Built Wazuh SIEM lab to monitor endpoints</p>
-        <p>> Investigated brute-force attacks using Splunk queries</p>
-        <p>> Detected phishing attempts via header & VirusTotal analysis</p>
-        <p>> Created incident reports using NIST IR framework</p>
+        <p>> Built Wazuh SIEM lab & monitored endpoints</p>
+        <p>> Detected brute-force attempts via Splunk queries</p>
+        <p>> Phishing analysis using VirusTotal & header inspection</p>
+        <p>> Incident reports using NIST framework</p>
     </div>
-</section>
-
-<section>
-    <h2>Certifications</h2>
-    <ul>
-        <li>Cyber Security Analyst - Hacker School</li>
-        <li>Introduction to Cyber Security - Cisco</li>
-        <li>Certified Phishing Prevention Specialist (CPPS)</li>
-        <li>Tata Forage Cyber Security Simulation</li>
-    </ul>
 </section>
 
 <section>
@@ -117,6 +131,62 @@
     <p>Email: kvkreddy025@gmail.com</p>
     <p>Location: Hyderabad, India</p>
 </section>
+
+<footer>
+    <p>© 2026 Krishna Reddy | SOC Analyst Portfolio</p>
+</footer>
+
+<script>
+// Typing Animation
+const text = "SOC Analyst | Threat Hunter | Blue Team Enthusiast";
+let i = 0;
+function typing() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 60);
+    }
+}
+typing();
+
+// Resume Download
+function downloadResume() {
+    window.open("resume.pdf");
+
+}
+
+// Matrix Effect
+var canvas = document.getElementById("matrix");
+var ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+var letters = "01";
+letters = letters.split("");
+
+var fontSize = 14;
+var columns = canvas.width/fontSize;
+var drops = [];
+
+for(var x = 0; x < columns; x++)
+    drops[x] = 1;
+
+function draw(){
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#0F0";
+    ctx.font = fontSize + "px arial";
+    for(var i = 0; i < drops.length; i++){
+        var text = letters[Math.floor(Math.random()*letters.length)];
+        ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+        if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
+            drops[i] = 0;
+        drops[i]++;
+    }
+}
+setInterval(draw, 35);
+</script>
 
 </body>
 </html>
