@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Krishna Reddy | SOC Analyst</title>
+    <title>K V Krishna Reddy | SOC Analyst</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <style>
         body {
             margin: 0;
             background: black;
-            color: #00ff00;
+            color: white;
             font-family: 'Courier New', monospace;
             overflow-x: hidden;
         }
@@ -27,12 +27,15 @@
 
         h1 {
             font-size: 45px;
-            text-shadow: 0 0 20px #00ff00;
+            color: #00ff00;
+            text-shadow: 0 0 15px #00ff00;
         }
 
         h2 {
+            color: #00ff00;
             border-bottom: 1px solid #00ff00;
             padding-bottom: 10px;
+            font-weight: bold;
         }
 
         section {
@@ -45,19 +48,7 @@
             background: #111;
             padding: 20px;
             margin-top: 20px;
-            box-shadow: 0 0 20px #00ff00;
-        }
-
-        .skill-bar {
-            background: #111;
-            margin: 10px 0;
-        }
-
-        .skill-fill {
-            height: 20px;
-            background: #00ff00;
-            width: 0;
-            transition: width 2s;
+            box-shadow: 0 0 10px rgba(0,255,0,0.4);
         }
 
         button {
@@ -70,12 +61,22 @@
         }
 
         button:hover {
-            background: #003300;
+            background: #002200;
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         footer {
             text-align: center;
             padding: 20px;
+            border-top: 1px solid #003300;
         }
     </style>
 </head>
@@ -93,52 +94,79 @@
 <section>
     <h2>About Me</h2>
     <div class="terminal">
-        <p>> Entry-Level SOC Analyst</p>
-        <p>> SIEM Monitoring | Threat Detection | Incident Response</p>
-        <p>> Splunk | Wazuh | Nmap | Wireshark | Burp Suite</p>
+        <p><strong>Entry-Level SOC Analyst</strong></p>
+        <p>Skilled in Security Monitoring, Threat Detection, Threat Hunting and Incident Response.</p>
+        <p>Hands-on experience with SIEM tools, log analysis and vulnerability assessment.</p>
     </div>
 </section>
 
 <section>
     <h2>Technical Skills</h2>
 
-    <p>SIEM Monitoring</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+    <div class="terminal">
 
-    <p>Threat Detection</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        <p><strong>SOC Operations:</strong></p>
+        <p>Security Monitoring, Threat Detection, Threat Hunting</p>
+        <p>Incident Response, Alert Triage, Incident Documentation</p>
 
-    <p>Incident Response</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        <br>
 
-    <p>Vulnerability Assessment</p>
-    <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        <p><strong>SIEM & Log Analysis:</strong></p>
+        <p>Splunk, Log Correlation, Event Analysis</p>
 
+        <br>
+
+        <p><strong>Security & Pentesting Tools:</strong></p>
+        <p>Kali Linux, Nmap, Hydra, Burp Suite, Metasploit</p>
+        <p>Wireshark, Nessus, VirusTotal</p>
+
+        <br>
+
+        <p><strong>Vulnerability Management:</strong></p>
+        <p>Vulnerability Assessment, CVSS Scoring, Reporting, OWASP Top 10</p>
+
+        <br>
+
+        <p><strong>Endpoint & Network Security:</strong></p>
+        <p>Microsoft Defender, IDS/IPS Concepts</p>
+        <p>Packet Analysis, Firewall Basics</p>
+
+        <br>
+
+        <p><strong>Operating Systems:</strong></p>
+        <p>Windows, Kali Linux</p>
+
+    </div>
 </section>
 
 <section>
-    <h2>Hands-On SOC Projects</h2>
+    <h2>Projects</h2>
     <div class="terminal">
-        <p>> Built Wazuh SIEM lab & monitored endpoints</p>
-        <p>> Detected brute-force attempts via Splunk queries</p>
-        <p>> Phishing analysis using VirusTotal & header inspection</p>
-        <p>> Incident reports using NIST framework</p>
+        <p><strong>Brute Force Detection:</strong> Investigated failed login attempts using Splunk queries.</p>
+        <p><strong>Phishing Investigation:</strong> Analyzed email headers & checked hashes via VirusTotal.</p>
+        <p><strong>Incident Reporting:</strong> Created reports based on NIST Incident Response framework.</p>
     </div>
 </section>
 
 <section>
     <h2>Contact</h2>
-    <p>Email: kvkreddy025@gmail.com</p>
-    <p>Location: Hyderabad, India</p>
+    <p><strong>Email:</strong> kvkreddy025@gmail.com</p>
+    <p><strong>Location:</strong> Hyderabad, India</p>
+    <p><strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/krishna-kanumarla" target="_blank">
+        linkedin.com/in/krishna-kanumarla
+        </a>
+    </p>
 </section>
 
 <footer>
-    <p>© 2026 Krishna Reddy | SOC Analyst Portfolio</p>
+    <p>© 2026 K V Krishna Reddy | SOC Analyst Portfolio</p>
 </footer>
 
 <script>
+
 // Typing Animation
-const text = "SOC Analyst | Threat Hunter | Blue Team Enthusiast";
+const text = "SOC Analyst | Threat Hunter | SIEM Enthusiast";
 let i = 0;
 function typing() {
     if (i < text.length) {
@@ -152,10 +180,9 @@ typing();
 // Resume Download
 function downloadResume() {
     window.open("resume.pdf");
-
 }
 
-// Matrix Effect
+// Matrix Background
 var canvas = document.getElementById("matrix");
 var ctx = canvas.getContext("2d");
 
@@ -176,7 +203,7 @@ function draw(){
     ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "#0F0";
-    ctx.font = fontSize + "px arial";
+    ctx.font = fontSize + "px monospace";
     for(var i = 0; i < drops.length; i++){
         var text = letters[Math.floor(Math.random()*letters.length)];
         ctx.fillText(text, i*fontSize, drops[i]*fontSize);
@@ -186,6 +213,7 @@ function draw(){
     }
 }
 setInterval(draw, 35);
+
 </script>
 
 </body>
